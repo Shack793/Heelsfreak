@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Heelsfreak Hub</title>
+<meta name="description" content="Quality, affordable heels and bags. Order online and pay by mobile money.">
+<meta name="theme-color" content="#0D0A07">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:title" content="Heelsfreak Hub">
+<meta property="og:description" content="Quality, affordable heels and bags. Slay on budget.">
+<meta property="og:image" content="/images/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Figtree:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/app.css">
+<style>html,body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <button class="brand" data-go="shop" aria-label="Go to shop"><img id="logoImg" alt=""><span><b id="brandName"></b><small id="brandTag"></small></span></button>
+    <nav class="cats" id="navCats" aria-label="Categories"></nav>
+    <div class="top-actions">
+      <button class="ghost" id="adminBtn" hidden>Admin</button>
+      <button class="bagbtn" id="bagBtn" aria-label="Open bag">Bag <span id="bagN">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="v-shop" class="view">
+    <section class="wrap hero">
+      <div>
+        <p class="eyebrow" id="heroEyebrow"></p>
+        <h1 id="heroTitle"></h1>
+        <p class="lede" id="heroIntro"></p>
+        <div class="cta" id="heroCta"></div>
+        <p class="contact">Orders and enquiries: <span class="mono" id="heroPhones"></span></p>
+      </div>
+      <div class="arch"><img id="heroImg" alt=""></div>
+    </section>
+    <section class="wrap shop" id="shop">
+      <div class="shop-bar">
+        <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+        <input class="search" type="search" id="q" placeholder="Search the shop" aria-label="Search products">
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+  </section>
+
+  <section id="v-checkout" class="view" hidden>
+    <div class="wrap page">
+      <p class="eyebrow">Checkout</p>
+      <h1>Your details</h1>
+      <div class="two">
+        <form class="panel form" id="coForm" novalidate>
+          <div class="row2">
+            <label for="coName">Full name<input id="coName" autocomplete="name"></label>
+            <label for="coPhone">Phone number<input id="coPhone" type="tel" autocomplete="tel"></label>
+          </div>
+          <div><span class="optlabel">Delivery</span><div class="opts" id="coDelivery"></div></div>
+          <label for="coAddr">Delivery address or area<input id="coAddr" autocomplete="street-address" placeholder="Street, area, landmark, city"></label>
+          <div><span class="optlabel">Pay with</span><div class="opts" id="coPay"></div></div>
+          <label for="coNote">Note for the shop (optional)<textarea id="coNote" rows="3" placeholder="Preferred delivery time, gift wrap, anything else"></textarea></label>
+          <p class="warn" id="coWarn" aria-live="polite"></p>
+          <button class="btn gold" type="submit" id="coSubmit">Place order and see payment details</button>
+          <p class="note">You pay by mobile money after placing the order. Nothing is charged on this site.</p>
+        </form>
+        <aside class="panel summary" id="coSummary"></aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="v-pay" class="view" hidden>
+    <div class="wrap page pay" id="payBody"></div>
+  </section>
+
+
+  <section id="v-login" class="view" hidden>
+    <div class="wrap page login">
+      <p class="eyebrow">Shop admin</p>
+      <h1>Sign in</h1>
+      <form class="panel form" id="loginForm" novalidate>
+        <label for="loginPw">Admin password<input id="loginPw" type="password" autocomplete="current-password"></label>
+        <p class="warn" id="loginWarn" aria-live="polite"></p>
+        <button class="btn gold" type="submit">Sign in</button>
+        <p class="note">The password is the ADMIN_PASSWORD you set in Netlify.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="v-admin" class="view" hidden>
+    <div class="admin-top">
+      <div class="wrap">
+        <span class="status" id="pubStatus" aria-live="polite">All changes are live.</span>
+        <button class="btn small" id="viewStore">Preview store</button>
+        <button class="btn gold small" id="pubBtn" disabled>Publish changes</button>
+        <button class="btn small" id="logoutBtn">Sign out</button>
+      </div>
+    </div>
+    <div class="wrap admin">
+      <nav class="anav" aria-label="Admin sections">
+        <button data-tab="products">All products</button>
+        <button data-tab="edit" id="tabEdit">Add new product</button>
+        <button data-tab="settings">Store settings</button>
+        <div class="meter"><span id="meterTxt"></span><div class="trk"><i id="meterBar"></i></div></div>
+      </nav>
+      <div class="amain" id="amain"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span><b id="footName"></b><br><span id="footTag"></span></span>
+    <span>Call or WhatsApp<br><span class="mono" id="footPhones"></span></span>
+    <span><span id="footLast"></span><br><button class="adminlink" id="adminLink">Shop admin</button></span>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mName">
+  <div class="sheet">
+    <button class="x" data-close aria-label="Close">×</button>
+    <div class="gallery"><div class="main"><img id="mImg" alt=""></div><div class="thumbs" id="mThumbs"></div></div>
+    <div class="pinfo">
+      <p class="eyebrow" id="mCat"></p>
+      <h2 id="mName"></h2>
+      <div class="price" id="mPrice"></div>
+      <p id="mDesc"></p>
+      <div id="mSizeWrap"><span class="optlabel">Size (EU)</span><div class="sizes" id="mSizes"></div></div>
+      <div><span class="optlabel">Quantity</span><span class="qty"><button id="mDec" aria-label="Fewer">−</button><span id="mQty">1</span><button id="mInc" aria-label="More">+</button></span></div>
+      <p class="warn" id="mWarn" aria-live="polite"></p>
+      <div class="addrow"><button class="btn gold" id="mAdd">Add to bag</button></div>
+    </div>
+  </div>
+</div>
+
+<aside class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="dTitle">
+  <header><h2 id="dTitle">Your bag</h2><button class="x" data-close aria-label="Close bag">×</button></header>
+  <div class="dbody" id="dBody"></div>
+  <div class="dfoot" id="dFoot"></div>
+</aside>
+
+<div class="toast" id="toast" hidden aria-live="polite"></div>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

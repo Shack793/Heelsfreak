@@ -1,0 +1,268 @@
+{
+ "v": 1,
+ "settings": {
+  "storeName": "Heelsfreak Hub",
+  "tagline": "Slay on budget",
+  "intro": "Quality, affordable heels and bags. Pick your pair, place your order, pay by mobile money, and we deliver.",
+  "currency": "GH₵",
+  "phones": "0551816633, 0551602083",
+  "whatsapp": "233551816633",
+  "orderPrefix": "HFH",
+  "categories": [
+   "Heels",
+   "Bags",
+   "Accessories"
+  ],
+  "payments": [
+   {
+    "method": "MTN Mobile Money",
+    "number": "0551816633",
+    "name": "Heelsfreak Hub"
+   }
+  ],
+  "payNote": "Send the exact total and use your order number as the reference. Then send us a screenshot of the payment on WhatsApp. We confirm and dispatch once payment is received.",
+  "delivery": [
+   {
+    "label": "Pickup",
+    "fee": 0
+   },
+   {
+    "label": "Delivery (fee confirmed on WhatsApp)",
+    "fee": null
+   }
+  ],
+  "logo": "/images/logo.jpg",
+  "hero": "/images/hero.jpg"
+ },
+ "products": [
+  {
+   "id": "p1",
+   "name": "Crystal Strap Patent Mule",
+   "cat": "Heels",
+   "price": 650,
+   "sale": null,
+   "desc": "Glossy red patent mule with a pointed toe, a sparkling crystal strap across the foot and a slim stiletto heel. Made for nights out.",
+   "sizes": "36,37,38,39,40,41",
+   "badge": "New",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p1-1.jpg"
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "Black Crystal Strap Mule",
+   "cat": "Heels",
+   "price": 650,
+   "sale": null,
+   "desc": "Black patent pointed-toe mule with a crystal strap and a slim stiletto heel. Dresses up jeans or a gown.",
+   "sizes": "36,37,38,39,40,41",
+   "badge": "",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p2-1.jpg",
+    "/images/p2-2.jpg"
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "Lime Strappy Stiletto Sandal",
+   "cat": "Heels",
+   "price": 480,
+   "sale": null,
+   "desc": "Bright lime sandal with criss-cross straps, an ankle tie and a stiletto heel.",
+   "sizes": "36,37,38,39,40,41",
+   "badge": "",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p3-1.jpg"
+   ]
+  },
+  {
+   "id": "p4",
+   "name": "Silver Crystal Lace-Up Sandal",
+   "cat": "Heels",
+   "price": 550,
+   "sale": null,
+   "desc": "Clear straps studded with crystals, an ankle wrap and a slim heel. The party pair.",
+   "sizes": "36,37,38,39,40,41",
+   "badge": "Bestseller",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p4-1.jpg"
+   ]
+  },
+  {
+   "id": "p5",
+   "name": "Purple Ankle-Strap Sandal",
+   "cat": "Heels",
+   "price": 450,
+   "sale": null,
+   "desc": "Minimal purple satin sandal with a thin toe strap, buckled ankle strap and stiletto heel.",
+   "sizes": "36,37,38,39,40,41",
+   "badge": "",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p5-1.jpg"
+   ]
+  },
+  {
+   "id": "p6",
+   "name": "Pink Satin Bow Slingback",
+   "cat": "Heels",
+   "price": 580,
+   "sale": null,
+   "desc": "Black pointed-toe slingback finished with an oversized pink satin bow edged in crystals.",
+   "sizes": "36,37,38,39,40,41",
+   "badge": "New",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p6-1.jpg",
+    "/images/p6-2.jpg"
+   ]
+  },
+  {
+   "id": "p7",
+   "name": "Gold Studded Strap Sandal",
+   "cat": "Heels",
+   "price": 520,
+   "sale": null,
+   "desc": "Metallic gold sandal with studded straps, an ankle strap and a slim heel.",
+   "sizes": "36,37,38,39,40,41",
+   "badge": "",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p7-1.jpg",
+    "/images/p7-2.jpg"
+   ]
+  },
+  {
+   "id": "p8",
+   "name": "Plum Croc Envelope Clutch",
+   "cat": "Bags",
+   "price": 420,
+   "sale": null,
+   "desc": "Oversized croc-effect envelope clutch in plum with a wrist strap at the back.",
+   "sizes": "",
+   "badge": "",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p8-1.jpg"
+   ]
+  },
+  {
+   "id": "p9",
+   "name": "Crystal Vine Satin Bag",
+   "cat": "Bags",
+   "price": 450,
+   "sale": null,
+   "desc": "Black satin flap bag with a curved crystal handle and a detachable chain strap.",
+   "sizes": "",
+   "badge": "Bestseller",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p9-1.jpg"
+   ]
+  },
+  {
+   "id": "p10",
+   "name": "Pink Crystal Ring Clutch",
+   "cat": "Bags",
+   "price": 420,
+   "sale": null,
+   "desc": "Pink structured clutch with a crystal ring handle and silver hardware.",
+   "sizes": "",
+   "badge": "",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p10-1.jpg"
+   ]
+  },
+  {
+   "id": "p11",
+   "name": "Gold Mirror Egg Bag",
+   "cat": "Bags",
+   "price": 480,
+   "sale": null,
+   "desc": "Mirror-gold egg-shaped bag with a cut-out handle and a chain strap. A statement piece.",
+   "sizes": "",
+   "badge": "New",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p11-1.jpg",
+    "/images/p11-2.jpg"
+   ]
+  },
+  {
+   "id": "p12",
+   "name": "Gold Leather Pouch",
+   "cat": "Bags",
+   "price": 520,
+   "sale": null,
+   "desc": "Soft gold leather pouch with a sculpted metal frame closure.",
+   "sizes": "",
+   "badge": "",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p12-1.jpg"
+   ]
+  },
+  {
+   "id": "p13",
+   "name": "Red Patent Shoulder Bag",
+   "cat": "Bags",
+   "price": 450,
+   "sale": null,
+   "desc": "Glossy red patent shoulder bag with a gold T-lock closure.",
+   "sizes": "",
+   "badge": "",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p13-1.jpg"
+   ]
+  },
+  {
+   "id": "p14",
+   "name": "Gold Shell Clutch",
+   "cat": "Bags",
+   "price": 380,
+   "sale": null,
+   "desc": "Ribbed gold clutch shaped like a shell. Holds your phone, keys and lipstick.",
+   "sizes": "",
+   "badge": "",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p14-1.jpg"
+   ]
+  },
+  {
+   "id": "p15",
+   "name": "Orange Top-Handle Bag",
+   "cat": "Bags",
+   "price": 550,
+   "sale": null,
+   "desc": "Structured orange top-handle bag with gold hardware and a detachable shoulder strap.",
+   "sizes": "",
+   "badge": "",
+   "stock": "in",
+   "visible": true,
+   "images": [
+    "/images/p15-1.jpg"
+   ]
+  }
+ ]
+}

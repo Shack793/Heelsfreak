@@ -1,0 +1,12 @@
+{
+  "name": "heelsfreak-hub",
+  "private": true,
+  "type": "module",
+  "description": "Heelsfreak Hub online store with admin panel, hosted on Netlify",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}

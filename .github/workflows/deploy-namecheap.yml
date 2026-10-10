@@ -1,0 +1,34 @@
+name: Deploy to Namecheap
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy via SSH (rsync) to Namecheap
+        uses: easingthemes/ssh-deploy@v5.1.22
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.NAMECHEAP_HOST }}
+          REMOTE_USER: ${{ secrets.NAMECHEAP_USER }}
+          REMOTE_PORT: ${{ secrets.NAMECHEAP_PORT }}
+          # If index.html is at repo root, keep SOURCE as "./".
+          # If you push the whole HEALSFREAK folder (site lives in
+          # heelsfreak-hub/), change this to "heelsfreak-hub/".
+          SOURCE: "./"
+          TARGET: ${{ secrets.NAMECHEAP_TARGET }}
+          EXCLUDE: "/.git*, /.github/, /netlify/functions/, /node_modules/, /.netlify/"
+          SCRIPT_AFTER: |
+            echo "Deployed to: $TARGET"
+            ls -la "$TARGET" | head -n 30
+            find "$TARGET" -type d -exec chmod 755 {} \;
+            find "$TARGET" -type f -exec chmod 644 {} \;
+            echo "Permissions fixed."
+          ARGS: "-rlzv --delete --omit-dir-times"
