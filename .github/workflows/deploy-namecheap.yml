@@ -24,7 +24,7 @@ jobs:
           # heelsfreak-hub/), change this to "heelsfreak-hub/".
           SOURCE: "./"
           TARGET: ${{ secrets.NAMECHEAP_TARGET }}
-          EXCLUDE: "/.git*, /.github/, /netlify/functions/, /node_modules/, /.netlify/"
+          EXCLUDE: "/.git*, /.github/, /netlify/functions/, /node_modules/, /.netlify/, /cgi-bin/"
           SCRIPT_AFTER: |
             echo "Deployed to: $TARGET"
             ls -la "$TARGET" | head -n 30
